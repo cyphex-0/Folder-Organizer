@@ -1,0 +1,53 @@
+{
+  "name": "folder-organizer",
+  "version": "1.0.0",
+  "description": "Smart Folder Organizer Desktop App",
+  "main": "backend/main.js",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"wait-on http-get://localhost:5173 && cross-env NODE_ENV=development electron .\"",
+    "build:react": "vite build",
+    "build:electron": "electron-builder --win",
+    "build": "npm run build:react && npm run build:electron"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "lucide-react": "^1.11.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^41.3.0",
+    "electron-builder": "^26.8.1",
+    "vite": "^8.0.10",
+    "wait-on": "^9.0.5"
+  },
+  "build": {
+    "appId": "com.folder.organizer",
+    "productName": "Folder Organizer",
+    "icon": "frontend/assets/icon.png",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "frontend/assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true
+    },
+    "files": [
+      "dist/**/*",
+      "backend/**/*",
+      "frontend/assets/**/*",
+      "package.json"
+    ]
+  }
+}
