@@ -1,6 +1,10 @@
 # Folder Organizer
 
+![Dashboard](./dashboard.png)
+
 A smart, automated folder organizer desktop application that monitors specified directories and automatically sorts incoming files into designated folders based on configurable rules.
+
+**Live Project Link / Releases**: [Download Latest Release](../../releases/latest)
 
 ## Tech Stack
 
@@ -12,6 +16,23 @@ This project is built using modern desktop application technologies:
 *   **Node.js**: Backend JavaScript runtime powering the core logic.
 *   **Chokidar**: High-performance file system watcher.
 *   **Lucide React**: Beautiful icon library for the frontend.
+
+## Dependencies
+
+**Core Dependencies:**
+*   `chokidar` (^5.0.0)
+*   `lucide-react` (^1.11.0)
+*   `react` (^19.2.5)
+*   `react-dom` (^19.2.5)
+
+**Development Dependencies:**
+*   `@vitejs/plugin-react` (^6.0.1)
+*   `concurrently` (^9.2.1)
+*   `cross-env` (^10.1.0)
+*   `electron` (^41.3.0)
+*   `electron-builder` (^26.8.1)
+*   `vite` (^8.0.10)
+*   `wait-on` (^9.0.5)
 
 ## Key Features
 
